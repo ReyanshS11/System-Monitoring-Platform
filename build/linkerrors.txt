@@ -1,0 +1,8 @@
+================================================================================
+Linker Errors
+Generated: 2026-11-18T22:36:56.750Z
+Total Errors: 1
+================================================================================
+
+[LNK1168] (MSVC)
+cannot open C:\Reyansh\System Monitoring Platform\build\Debug\SystemMonitoringPlatform.exe for writing [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]

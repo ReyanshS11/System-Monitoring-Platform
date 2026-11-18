@@ -1,14 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Reyansh\System Monitoring Platform\main.cpp">
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\system\system_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\CPU\cpu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\system\system_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Reyansh\System Monitoring Platform\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ECA42F24-8E4F-331B-945A-3C3E4E6C6D45}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{119F6F5C-BE56-3FA2-B9C2-17665A7C32D1}</UniqueIdentifier>
     </Filter>
