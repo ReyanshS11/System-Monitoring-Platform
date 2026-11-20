@@ -1,7 +1,6 @@
 #include "cpu.h"
 
 #include <Windows.h>
-#include <processthreadsapi.h>
 
 #include <thread>
 #include <chrono>

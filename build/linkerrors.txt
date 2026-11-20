@@ -1,8 +1,11 @@
 ================================================================================
 Linker Errors
-Generated: 2026-11-18T22:36:56.750Z
-Total Errors: 1
+Generated: 2026-11-19T21:15:49.179Z
+Total Errors: 2
 ================================================================================
 
-[LNK1168] (MSVC)
-cannot open C:\Reyansh\System Monitoring Platform\build\Debug\SystemMonitoringPlatform.exe for writing [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]
+[LNK2005] (MSVC)
+"struct CPUStats __cdecl readCPU(void)" (?readCPU@@YA?AUCPUStats@@XZ) already defined in windows.obj [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]
+
+[LNK1169] (MSVC)
+one or more multiply defined symbols found [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]

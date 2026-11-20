@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/SystemMonitoringPlatform.exe"
+			"path" : "RelWithDebInfo/SystemMonitoringPlatform.exe"
 		},
 		{
-			"path" : "Debug/SystemMonitoringPlatform.pdb"
+			"path" : "RelWithDebInfo/SystemMonitoringPlatform.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -30,7 +30,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 4,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -58,7 +58,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
 				}
 			],
 			"language" : "CXX",
@@ -82,7 +82,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
