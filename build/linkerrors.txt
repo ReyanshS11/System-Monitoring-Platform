@@ -1,11 +1,11 @@
 ================================================================================
 Linker Errors
-Generated: 2026-11-19T21:15:49.179Z
+Generated: 2026-11-20T21:12:41.616Z
 Total Errors: 2
 ================================================================================
 
-[LNK2005] (MSVC)
-"struct CPUStats __cdecl readCPU(void)" (?readCPU@@YA?AUCPUStats@@XZ) already defined in windows.obj [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]
+[LNK2019] (MSVC)
+unresolved external symbol "double __cdecl getCPUUsage(void)" (?getCPUUsage@@YANXZ) referenced in function main [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]
 
-[LNK1169] (MSVC)
-one or more multiply defined symbols found [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]
+[LNK1120] (MSVC)
+1 unresolved externals [C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.vcxproj]

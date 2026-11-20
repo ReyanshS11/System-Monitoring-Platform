@@ -1,3 +1,4 @@
 C:\Reyansh\System Monitoring Platform\src\main.cpp;C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.dir\Debug\main.obj
 C:\Reyansh\System Monitoring Platform\src\system\system_info.cpp;C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.dir\Debug\system_info.obj
-C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp;C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.dir\Debug\windows.obj
+C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp;C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.dir\Debug\src\CPU\windows.cpp.obj
+C:\Reyansh\System Monitoring Platform\src\memory\windows.cpp;C:\Reyansh\System Monitoring Platform\build\SystemMonitoringPlatform.dir\Debug\src\memory\windows.cpp.obj

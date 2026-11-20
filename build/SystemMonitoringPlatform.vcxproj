@@ -413,7 +413,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\CPU\cpu.h" />
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\system\system_info.h" />
     <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\system\system_info.cpp" />
-    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp" />
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp">
+      <ObjectFileName>$(IntDir)src/CPU/windows.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\memory\windows.cpp">
+      <ObjectFileName>$(IntDir)src/memory/windows.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\memory\memory.h" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -10,12 +10,18 @@
     <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\memory\windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\CPU\cpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\system\system_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\memory\memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
