@@ -6,10 +6,12 @@ if(WIN32)
         src/CPU/windows.cpp
         src/memory/windows.cpp)
 elseif(LINUX)
-    set(PLATFORM_SRC src/CPU/linux.cpp)
+    set(PLATFORM_SRC
+        src/CPU/linux.cpp
+        src/memory/linux.cpp)
 endif()
 
-add_executable(SystemMonitoringPlatform 
+add_executable(SystemMonitoringPlatform
     src/main.cpp
     src/CPU/cpu.h
     src/system/system_info.h
