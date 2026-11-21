@@ -1,0 +1,3 @@
+C:/Reyansh/System Monitoring Platform/build/CMakeFiles/SystemMonitoringPlatform.dir
+C:/Reyansh/System Monitoring Platform/build/CMakeFiles/ALL_BUILD.dir
+C:/Reyansh/System Monitoring Platform/build/CMakeFiles/ZERO_CHECK.dir
