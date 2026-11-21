@@ -1,0 +1,10 @@
+^C:\REYANSH\SYSTEM MONITORING PLATFORM\BUILD-WINDOWS\CMAKEFILES\FD1D7DA8A7C6C839FDF79BFE3AB1B12A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Reyansh/System Monitoring Platform" "-BC:/Reyansh/System Monitoring Platform/build-windows" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Reyansh/System Monitoring Platform/build-windows/SystemMonitoringPlatform.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

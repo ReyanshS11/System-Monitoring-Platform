@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/SystemMonitoringPlatform.dir/link.d CMakeFiles/SystemMonitoringPlatform.dir/src/main.cpp.o CMakeFiles/SystemMonitoringPlatform.dir/src/system/system_info.cpp.o CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o -o SystemMonitoringPlatform

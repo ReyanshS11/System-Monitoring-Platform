@@ -7,7 +7,7 @@
 #include "memory/memory.h"
 
 int main(int, char**){
-    while (true)
+    for (int i = 0; i < 5; i++)
     {
         std::cout << "CPU Usage: " << round(getCPUUsage()) << "%" << "\n\n";
 

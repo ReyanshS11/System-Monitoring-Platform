@@ -33,7 +33,7 @@ CPUStats readCPU()
 
 unsigned long long total(const CPUStats& s)
 {
-    return s.user + s.nice + s.system + s.iowait + s.irq + s.softirq + s.steal;
+    return s.user + s.nice + s.system + s.iowait + s.irq + s.softirq + s.steal + s.idle;
 }
 
 double getCPUUsage()
@@ -43,8 +43,8 @@ double getCPUUsage()
     CPUStats b = readCPU();
 
     auto totalDiff = total(b) - total(a);
-    auto idleDiff = a.idle - b.idle;
+    auto idleDiff = b.idle - a.idle;
 
-    double usage = 100 * (totalDiff - idleDiff) / totalDiff;
+    double usage = 100.0 * (totalDiff - idleDiff) / totalDiff;
     return usage;
 }
