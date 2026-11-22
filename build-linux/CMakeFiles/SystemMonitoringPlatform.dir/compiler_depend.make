@@ -237,6 +237,7 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o: /mnt/c/Reyansh/Syst
 
 CMakeFiles/SystemMonitoringPlatform.dir/src/main.cpp.o: /mnt/c/Reyansh/System\ Monitoring\ Platform/src/main.cpp \
   /mnt/c/Reyansh/System\ Monitoring\ Platform/src/CPU/cpu.h \
+  /mnt/c/Reyansh/System\ Monitoring\ Platform/src/GPU/gpu.h \
   /mnt/c/Reyansh/System\ Monitoring\ Platform/src/memory/memory.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -923,6 +924,8 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
+/mnt/c/Reyansh/System\ Monitoring\ Platform/src/GPU/gpu.h:
+
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/features-time64.h:
@@ -1148,6 +1151,10 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o:
 CMakeFiles/SystemMonitoringPlatform.dir/src/main.cpp.o:
 
 /usr/include/c++/15/type_traits:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/c++/15/bits/hash_bytes.h:
 
 /usr/include/c++/15/bits/locale_classes.tcc:
 
@@ -1454,7 +1461,3 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/15/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:

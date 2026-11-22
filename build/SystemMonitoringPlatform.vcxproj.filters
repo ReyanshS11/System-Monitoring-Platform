@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\memory\windows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Reyansh\System Monitoring Platform\src\GPU\windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\CPU\cpu.h">
@@ -22,6 +25,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\memory\memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Reyansh\System Monitoring Platform\src\GPU\gpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

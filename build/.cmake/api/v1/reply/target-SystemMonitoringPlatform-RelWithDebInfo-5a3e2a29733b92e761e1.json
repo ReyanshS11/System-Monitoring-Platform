@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/SystemMonitoringPlatform.exe"
+			"path" : "RelWithDebInfo/SystemMonitoringPlatform.exe"
 		},
 		{
-			"path" : "Debug/SystemMonitoringPlatform.pdb"
+			"path" : "RelWithDebInfo/SystemMonitoringPlatform.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -15,6 +15,7 @@
 		[
 			"_add_executable",
 			"add_executable",
+			"target_link_libraries",
 			"add_custom_command"
 		],
 		"files" : 
@@ -30,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 14,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
@@ -41,6 +42,12 @@
 			},
 			{
 				"command" : 2,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
 				"file" : 0,
 				"line" : 626,
 				"parent" : 1
@@ -58,7 +65,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
 				}
 			],
 			"language" : "CXX",
@@ -67,7 +74,8 @@
 				0,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
@@ -83,7 +91,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -95,18 +103,30 @@
 				"role" : "flags"
 			},
 			{
+				"backtrace" : 3,
+				"fragment" : "pdh.lib",
+				"role" : "libraries"
+			},
+			{
 				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"fragment" : "pdh"
+		}
+	],
 	"name" : "SystemMonitoringPlatform",
 	"nameOnDisk" : "SystemMonitoringPlatform.exe",
 	"orderDependencies" : 
 	[
 		{
-			"backtrace" : 3,
+			"backtrace" : 4,
 			"id" : "SystemMonitoringPlatform::@6890427a1f51a3e7e1df"
 		}
 	],
@@ -124,7 +144,8 @@
 				0,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		},
 		{
@@ -133,7 +154,8 @@
 			[
 				1,
 				2,
-				6
+				7,
+				8
 			]
 		}
 	],
@@ -175,7 +197,18 @@
 		},
 		{
 			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/GPU/windows.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
 			"path" : "src/memory/memory.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "src/GPU/gpu.h",
 			"sourceGroupIndex" : 1
 		}
 	],

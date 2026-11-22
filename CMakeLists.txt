@@ -4,7 +4,8 @@ project(SystemMonitoringPlatform VERSION 0.1.0 LANGUAGES C CXX)
 if(WIN32)
     set(PLATFORM_SRC
         src/CPU/windows.cpp
-        src/memory/windows.cpp)
+        src/memory/windows.cpp
+        src/GPU/windows.cpp)
 elseif(LINUX)
     set(PLATFORM_SRC
         src/CPU/linux.cpp
@@ -18,4 +19,9 @@ add_executable(SystemMonitoringPlatform
     src/system/system_info.cpp
     ${PLATFORM_SRC}
     src/memory/memory.h
+    src/GPU/gpu.h
 )
+
+if(WIN32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE pdh)
+endif()

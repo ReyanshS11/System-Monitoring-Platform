@@ -239,6 +239,7 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o
 CMakeFiles/SystemMonitoringPlatform.dir/src/main.cpp.o
  /mnt/c/Reyansh/System Monitoring Platform/src/main.cpp
  /mnt/c/Reyansh/System Monitoring Platform/src/CPU/cpu.h
+ /mnt/c/Reyansh/System Monitoring Platform/src/GPU/gpu.h
  /mnt/c/Reyansh/System Monitoring Platform/src/memory/memory.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h

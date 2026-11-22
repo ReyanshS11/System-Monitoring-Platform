@@ -203,4 +203,5 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/main.cpp.o: \
  /usr/include/c++/15/tr1/poly_laguerre.tcc \
  /usr/include/c++/15/tr1/riemann_zeta.tcc \
  /mnt/c/Reyansh/System\ Monitoring\ Platform/src/CPU/cpu.h \
- /mnt/c/Reyansh/System\ Monitoring\ Platform/src/memory/memory.h
+ /mnt/c/Reyansh/System\ Monitoring\ Platform/src/memory/memory.h \
+ /mnt/c/Reyansh/System\ Monitoring\ Platform/src/GPU/gpu.h

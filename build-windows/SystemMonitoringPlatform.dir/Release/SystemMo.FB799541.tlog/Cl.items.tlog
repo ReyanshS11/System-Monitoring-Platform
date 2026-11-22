@@ -2,3 +2,4 @@ C:\Reyansh\System Monitoring Platform\src\main.cpp;C:\Reyansh\System Monitoring 
 C:\Reyansh\System Monitoring Platform\src\system\system_info.cpp;C:\Reyansh\System Monitoring Platform\build-windows\SystemMonitoringPlatform.dir\Release\system_info.obj
 C:\Reyansh\System Monitoring Platform\src\CPU\windows.cpp;C:\Reyansh\System Monitoring Platform\build-windows\SystemMonitoringPlatform.dir\Release\src\CPU\windows.cpp.obj
 C:\Reyansh\System Monitoring Platform\src\memory\windows.cpp;C:\Reyansh\System Monitoring Platform\build-windows\SystemMonitoringPlatform.dir\Release\src\memory\windows.cpp.obj
+C:\Reyansh\System Monitoring Platform\src\GPU\windows.cpp;C:\Reyansh\System Monitoring Platform\build-windows\SystemMonitoringPlatform.dir\Release\src\GPU\windows.cpp.obj
