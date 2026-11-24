@@ -21,10 +21,9 @@ int main(int, char**){
         std::cout << "Memory Statistics - \n"
                     << "    Total Memory: " << round((mem.totalPhys / 1073741824.0) * 10.0) / 10.0 << "GB" << "\n"
                     << "    Available Memory: " << round((mem.availPhys / 1073741824.0) * 10.0) / 10.0 << "GB" << "\n"
-                    << "    Used Memory: " << round((mem.usedPhys / 1073741824.0) * 10.0) / 10.0 << "GB" << "\n\n\n";
-
-        std::cout << "GPU Usage: " << round(getGPUUsage()) << "%" << "\n\n" << std::flush;
-
+                    << "    Used Memory: " << round((mem.usedPhys / 1073741824.0) * 10.0) / 10.0 << "GB" << "\n\n\n"
+                    << std::flush;
+ 
         std::this_thread::sleep_for(
             std::chrono::milliseconds(500)
         );

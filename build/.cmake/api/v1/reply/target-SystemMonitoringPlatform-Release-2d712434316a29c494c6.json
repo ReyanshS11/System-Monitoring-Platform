@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/SystemMonitoringPlatform.exe"
+			"path" : "Release/SystemMonitoringPlatform.exe"
 		},
 		{
-			"path" : "MinSizeRel/SystemMonitoringPlatform.pdb"
+			"path" : "Release/SystemMonitoringPlatform.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -65,7 +65,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
 				}
 			],
 			"language" : "CXX",
@@ -91,7 +91,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -108,6 +108,11 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
+				"fragment" : "dxgi.lib",
+				"role" : "libraries"
+			},
+			{
 				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
 				"role" : "libraries"
 			}
@@ -119,6 +124,10 @@
 		{
 			"backtrace" : 3,
 			"fragment" : "pdh"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "dxgi"
 		}
 	],
 	"name" : "SystemMonitoringPlatform",
