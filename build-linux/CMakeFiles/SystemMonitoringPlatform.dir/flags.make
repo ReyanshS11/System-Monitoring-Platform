@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -isystem /home/reyansh/vcpkg/installed/x64-linux/include
 
-CXX_FLAGS = -O3 -DNDEBUG
+CXX_FLAGS = -O3 -DNDEBUG -std=c++20
 

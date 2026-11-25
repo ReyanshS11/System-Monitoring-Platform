@@ -144,6 +144,13 @@ SystemMonitoringPlatform: CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.
 SystemMonitoringPlatform: CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o
 SystemMonitoringPlatform: CMakeFiles/SystemMonitoringPlatform.dir/build.make
 SystemMonitoringPlatform: CMakeFiles/SystemMonitoringPlatform.dir/compiler_depend.ts
+SystemMonitoringPlatform: /home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a
+SystemMonitoringPlatform: /usr/lib/x86_64-linux-gnu/libGL.so
+SystemMonitoringPlatform: /home/reyansh/vcpkg/installed/x64-linux/lib/libimplot.a
+SystemMonitoringPlatform: /home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a
+SystemMonitoringPlatform: /home/reyansh/vcpkg/installed/x64-linux/lib/libglfw3.a
+SystemMonitoringPlatform: /usr/lib/x86_64-linux-gnu/librt.a
+SystemMonitoringPlatform: /usr/lib/x86_64-linux-gnu/libm.so
 SystemMonitoringPlatform: CMakeFiles/SystemMonitoringPlatform.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Reyansh/System Monitoring Platform/build-linux/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable SystemMonitoringPlatform"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SystemMonitoringPlatform.dir/link.txt --verbose=$(VERBOSE)

@@ -6,6 +6,13 @@ SystemMonitoringPlatform: \
   CMakeFiles/SystemMonitoringPlatform.dir/src/system/system_info.cpp.o \
   CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o \
   CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o \
+  /home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a \
+  /usr/lib/x86_64-linux-gnu/libGL.so \
+  /home/reyansh/vcpkg/installed/x64-linux/lib/libimplot.a \
+  /home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a \
+  /home/reyansh/vcpkg/installed/x64-linux/lib/libglfw3.a \
+  /usr/lib/x86_64-linux-gnu/librt.a \
+  /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libdl.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -32,7 +39,13 @@ SystemMonitoringPlatform: \
   /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o \
-  /lib64/ld-linux-x86-64.so.2
+  /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0 \
+  /usr/lib/x86_64-linux-gnu/libGLX.so.0 \
+  /lib64/ld-linux-x86-64.so.2 \
+  /usr/lib/x86_64-linux-gnu/libX11.so.6 \
+  /usr/lib/x86_64-linux-gnu/libxcb.so.1 \
+  /usr/lib/x86_64-linux-gnu/libXau.so.6 \
+  /usr/lib/x86_64-linux-gnu/libXdmcp.so.6
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o:
 
@@ -47,6 +60,20 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/system/system_info.cpp.o:
 CMakeFiles/SystemMonitoringPlatform.dir/src/CPU/linux.cpp.o:
 
 CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o:
+
+/home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a:
+
+/usr/lib/x86_64-linux-gnu/libGL.so:
+
+/home/reyansh/vcpkg/installed/x64-linux/lib/libimplot.a:
+
+/home/reyansh/vcpkg/installed/x64-linux/lib/libimgui.a:
+
+/home/reyansh/vcpkg/installed/x64-linux/lib/libglfw3.a:
+
+/usr/lib/x86_64-linux-gnu/librt.a:
+
+/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libdl.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 
@@ -100,4 +127,16 @@ CMakeFiles/SystemMonitoringPlatform.dir/src/memory/linux.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o:
 
+/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0:
+
+/usr/lib/x86_64-linux-gnu/libGLX.so.0:
+
 /lib64/ld-linux-x86-64.so.2:
+
+/usr/lib/x86_64-linux-gnu/libX11.so.6:
+
+/usr/lib/x86_64-linux-gnu/libxcb.so.1:
+
+/usr/lib/x86_64-linux-gnu/libXau.so.6:
+
+/usr/lib/x86_64-linux-gnu/libXdmcp.so.6:
