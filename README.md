@@ -16,4 +16,4 @@ This is a simple system monitor to see real-time usage statistics for different 
 ## Instructions for Use
 1. Download the relase for your OS
 2. Unzip the files
-3. Run the application from the appropriate build folder
+3. Run the application
