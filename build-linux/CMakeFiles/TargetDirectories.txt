@@ -1,3 +1,0 @@
-/mnt/c/Reyansh/System Monitoring Platform/build-linux/CMakeFiles/SystemMonitoringPlatform.dir
-/mnt/c/Reyansh/System Monitoring Platform/build-linux/CMakeFiles/edit_cache.dir
-/mnt/c/Reyansh/System Monitoring Platform/build-linux/CMakeFiles/rebuild_cache.dir
