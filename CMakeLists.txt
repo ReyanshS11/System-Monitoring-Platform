@@ -9,33 +9,20 @@ if(WIN32)
     set(PLATFORM_SRC
         src/CPU/windows.cpp
         src/memory/windows.cpp)
-
-    add_executable(SystemMonitoringPlatform WIN32
-        src/main.cpp
-        src/CPU/cpu.h
-        src/system/system_info.h
-        src/system/system_info.cpp
-        ${PLATFORM_SRC}
-        src/memory/memory.h
-    )
-
-    target_link_options(SystemMonitoringPlatform PRIVATE
-        "/ENTRY:mainCRTStartup"
-    )
 elseif(LINUX)
     set(PLATFORM_SRC
         src/CPU/linux.cpp
         src/memory/linux.cpp)
-
-    add_executable(SystemMonitoringPlatform
-        src/main.cpp
-        src/CPU/cpu.h
-        src/system/system_info.h
-        src/system/system_info.cpp
-        ${PLATFORM_SRC}
-        src/memory/memory.h
-    )
 endif()
+
+add_executable(SystemMonitoringPlatform
+    src/main.cpp
+    src/CPU/cpu.h
+    src/system/system_info.h
+    src/system/system_info.cpp
+    src/memory/memory.h
+    ${PLATFORM_SRC}
+)
 
 find_package(imgui CONFIG REQUIRED)
 find_package(OpenGL REQUIRED)
