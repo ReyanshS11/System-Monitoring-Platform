@@ -1,1 +1,92 @@
+name: Build and Release
 
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake ninja-build pkg-config
+
+      - name: Checkout vcpkg
+        uses: actions/checkout@v4
+        with:
+          repository: microsoft/vcpkg
+          path: vcpkg
+
+      - name: Bootstrap vcpkg (Windows)
+        if: runner.os == 'Windows'
+        run: .\vcpkg\bootstrap-vcpkg.bat
+
+      - name: Bootstrap vcpkg (Linux)
+        if: runner.os == 'Linux'
+        run: ./vcpkg/bootstrap-vcpkg.sh
+
+      - name: Configure CMake
+        run: >
+          cmake -S . -B build -G Ninja
+          -DCMAKE_BUILD_TYPE=Release
+          -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.os == 'windows-latest' && 'x64-windows-static' || 'x64-linux' }}
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Package Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force release
+          Copy-Item build\Release\SystemMonitoringPlatform.exe release\
+          Compress-Archive -Path release\* -DestinationPath SystemMonitoringPlatform-Windows.zip
+
+      - name: Package Linux
+        if: runner.os == 'Linux'
+        run: |
+          mkdir -p release
+          cp build/SystemMonitoringPlatform release/
+          tar -czf SystemMonitoringPlatform-Linux.tar.gz -C release .
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            SystemMonitoringPlatform-Windows.zip
+            SystemMonitoringPlatform-Linux.tar.gz
+
+  release:
+      name: Publish Release
+      needs: build
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Download Packages
+          uses: actions/download-artifact@v4
+          with:
+            path: release-files
+            merge-multiple: true
+        
+        - name: Create GitHub Release
+          uses: softprop/action-gh-release@v2
+          with: 
+            files: release-files/*
+            generate_release_notes: true
