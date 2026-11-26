@@ -1,3 +1,4 @@
+
 name: Build and Release
 
 on:
@@ -15,18 +16,40 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        include:
+          - os: windows-latest
+            triplet: x64-windows-static
+          - os: ubuntu-latest
+            triplet: x64-linux
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Dependencies (Linux)
+      - name: Install Linux dependencies
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake ninja-build pkg-config libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libxext-dev
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            ninja-build \
+            pkg-config \
+            libx11-dev \
+            libxrandr-dev \
+            libxinerama-dev \
+            libxcursor-dev \
+            libxi-dev \
+            libxext-dev
+
+      - name: Verify Linux tools
+        if: runner.os == 'Linux'
+        run: |
+          cmake --version
+          ninja --version
+          g++ --version
 
       - name: Checkout vcpkg
         uses: actions/checkout@v4
@@ -36,6 +59,7 @@ jobs:
 
       - name: Bootstrap vcpkg (Windows)
         if: runner.os == 'Windows'
+        shell: pwsh
         run: .\vcpkg\bootstrap-vcpkg.bat
 
       - name: Bootstrap vcpkg (Linux)
@@ -47,7 +71,7 @@ jobs:
           cmake -S . -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
-          -DVCPKG_TARGET_TRIPLET=${{ matrix.os == 'windows-latest' && 'x64-windows-static' || 'x64-linux' }}
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }}
 
       - name: Build
         run: cmake --build build --config Release --parallel
@@ -57,7 +81,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force release
-          Copy-Item build\Release\SystemMonitoringPlatform.exe release\
+          Copy-Item build\SystemMonitoringPlatform.exe release\
           Compress-Archive -Path release\* -DestinationPath SystemMonitoringPlatform-Windows.zip
 
       - name: Package Linux
@@ -67,27 +91,35 @@ jobs:
           cp build/SystemMonitoringPlatform release/
           tar -czf SystemMonitoringPlatform-Linux.tar.gz -C release .
 
-      - name: Upload release asset
-        uses: softprops/action-gh-release@v2
+      - name: Upload Windows package
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
         with:
-          files: |
-            SystemMonitoringPlatform-Windows.zip
-            SystemMonitoringPlatform-Linux.tar.gz
+          name: Windows-package
+          path: SystemMonitoringPlatform-Windows.zip
+
+      - name: Upload Linux package
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Linux-package
+          path: SystemMonitoringPlatform-Linux.tar.gz
 
   release:
-      name: Publish Release
-      needs: build
-      runs-on: ubuntu-latest
+    name: Publish Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
 
-      steps:
-        - name: Download Packages
-          uses: actions/download-artifact@v4
-          with:
-            path: release-files
-            merge-multiple: true
-        
-        - name: Create GitHub Release
-          uses: softprops/action-gh-release@v2
-          with: 
-            files: release-files/*
-            generate_release_notes: true
+    steps:
+      - name: Download packages
+        uses: actions/download-artifact@v4
+        with:
+          path: release-files
+          merge-multiple: true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release-files/*
+          generate_release_notes: true
